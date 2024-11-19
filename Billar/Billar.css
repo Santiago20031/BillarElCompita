@@ -1,0 +1,233 @@
+body.main {
+    font-family: Arial, sans-serif;
+    background-image: url('Billar.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    color: #ffffff;
+}
+
+th {
+    background-color: #333333;
+}
+
+td input[type="time"],
+td input[type="number"],
+td input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #333333;
+    text-align: center;
+}
+
+td input[type="text"][readonly] {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #444444;
+    padding: 10px 20px;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.img-logo {
+    width: 180px;
+    height: 110px;
+    padding-bottom: 10px;
+}
+
+/* Estilos de navegación */
+.navegacion {
+    display: flex;
+    gap: 20px;
+}
+
+.navegacion ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navegacion li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Handjet", sans-serif;
+    padding: 10px;
+    width: 130px;
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+}
+
+li:hover {
+    box-shadow: 0 8px 8px 0 #000000, 0 8px 8px 0 #000000;
+    transform: translate(0px, 5px);
+}
+
+/* Botón */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:focus {
+    outline: none;
+}
+/* Billar.css */
+.estilos-mensaje {
+    display: none; /* Ocultar por defecto */
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.estilos-mensaje.success {
+    color: #155724; /* Color de texto verde */
+    background-color: #d4edda; /* Fondo verde claro */
+    border-color: #c3e6cb; /* Borde verde */
+}
+
+.estilos-mensaje.error {
+    color: #721c24; /* Color de texto rojo */
+    background-color: #f8d7da; /* Fondo rojo claro */
+    border-color: #f5c6cb; /* Borde rojo */
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    /* Navegación móvil */
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        width: 100%;
+        height: 300px;
+    }
+
+    .logo {
+        margin: 0;
+        justify-content: center;
+    }
+    
+    .navegacion {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navegacion ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .navegacion li a {
+        font-size: 18px;
+        padding: 5px;
+        background-color: red;
+        text-align: center;
+        border-radius: 5px;
+       
+    }
+
+    /* Tabla como tarjetas en móviles */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border: 1px solid #dddddd;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border: none;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #ffffff;
+        flex: 1;
+        padding-right: 10px;
+        text-align: left;
+    }
+
+    td input, td button {
+        width: 60%;
+    }
+}
